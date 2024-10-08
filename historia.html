@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia</title>
+    <link rel="stylesheet" href="css/proyecto0.2.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav>
+
+    <div id="historia" class="container">
+        <h1>Nuestra Historia</h1>
+        <div class="section">
+            <h2>Misión</h2>
+            <p>Mi misión es dedicarme a mis estudios con disciplina y pasión, aprovechando cada oportunidad de aprendizaje para adquirir conocimientos que me preparen para el futuro y me permitan contribuir positivamente a la sociedad.</p>
+        </div>
+        <div class="section">
+            <h2>Visión</h2>
+            <p>Quiero ser un estudiante destacado, esforzándome por alcanzar la excelencia académica y desarrollar habilidades que me preparen para los desafíos de la educación superior y el mundo laboral.</p>
+        </div>
+        <div class="section">
+            <h2>Breve Historia</h2>
+            <p>Había una vez un niño llamado Johann que vivía en la ciudad llena de edificios altos, tráfico y ruido. A diferencia de otros niños, Johann siempre encontró belleza en su entorno urbano. Le encantaba caminar por las calles, observar la vida acelerada de la ciudad y descubrir lugares escondidos.</p>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <img src="ima/lapiz3.png" alt="Imagen 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
